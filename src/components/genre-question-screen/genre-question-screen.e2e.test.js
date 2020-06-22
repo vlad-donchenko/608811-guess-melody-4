@@ -1,7 +1,7 @@
 import React from "react";
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import GenreQuestionScreen from "./genre-question-screen";
+import GenreQuestionScreen from "./genre-question-screen.jsx";
 import {questionGenre} from "../../mocks-test/questions";
 
 configure({adapter: new Adapter()});

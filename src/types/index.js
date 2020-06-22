@@ -22,7 +22,6 @@ const questionArtistType = PropTypes.shape({
     picture: PropTypes.string.isRequired,
     artist: PropTypes.string.isRequired,
   })).isRequired,
-  genre: PropTypes.string.isRequired,
   song: PropTypes.shape({
     artist: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
