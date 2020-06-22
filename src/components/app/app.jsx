@@ -1,14 +1,20 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
 import {errorsCountTypes, questionsType} from "../../types";
 
-const handleWelcomeScreen = () => {};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-const App = (props) => {
-  const {errorsCount, questions} = props;
+  render() {
+    const {errorsCount} = this.props;
 
-  return <WelcomeScreen errorsCount={errorsCount} onWelcomeButtonClick={handleWelcomeScreen} />;
-};
+    return (
+      <WelcomeScreen errorsCount={errorsCount} onWelcomeButtonClick={() => {}}/>
+    );
+  }
+}
 
 App.propTypes = {
   errorsCount: errorsCountTypes,
