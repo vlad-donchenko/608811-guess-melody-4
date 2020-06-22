@@ -8,7 +8,7 @@ const questionsType = PropTypes.array.isRequired;
 
 const onAnswerType = PropTypes.func.isRequired;
 
-const questionType = PropTypes.shape({
+const questionGenreType = PropTypes.shape({
   answers: PropTypes.arrayOf(PropTypes.shape({
     src: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
@@ -17,5 +17,17 @@ const questionType = PropTypes.shape({
   type: PropTypes.oneOf([GameType.ARTIST, GameType.GENRE]).isRequired,
 }).isRequired;
 
-export {errorsCountTypes, onWelcomeButtonClickType, questionsType, questionType, onAnswerType};
+const questionArtistType = PropTypes.shape({
+  answers: PropTypes.arrayOf(PropTypes.shape({
+    picture: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+  })).isRequired,
+  genre: PropTypes.string.isRequired,
+  song: PropTypes.shape({
+    artist: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+  })
+}).isRequired;
+
+export {errorsCountTypes, onWelcomeButtonClickType, questionsType, questionGenreType, questionArtistType, onAnswerType};
 

@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import {questionType, onAnswerType} from "../../types";
+import {questionGenreType, onAnswerType} from "../../types";
 
 class GenreQuestionScreen extends PureComponent {
   constructor(props) {
@@ -40,7 +40,7 @@ class GenreQuestionScreen extends PureComponent {
             onAnswer(question, this.state.answers);
           }}>
             {answers.map((answer, index) => (
-              <div key={`${index}-${answer}`} className="track">
+              <div key={`${index}-${answer.src}`} className="track">
                 <button className="track__button track__button--play" type="button"/>
                 <div className="track__status">
                   <audio src={answer.src}/>
@@ -67,7 +67,7 @@ class GenreQuestionScreen extends PureComponent {
 }
 
 GenreQuestionScreen.propTypes = {
-  question: questionType,
+  question: questionGenreType,
   onAnswer: onAnswerType
 };
 
